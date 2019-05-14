@@ -55,7 +55,7 @@ main(int argc, char **argv)
 		if (write_all(STDOUT_FILENO, buf, nread) == -1)
 			err(1, "<stdout>");
 		if (write_all(child_fds[1], buf, nread) == -1)
-			err(1, "%s", argv[1]);
+			err(1, "%s", argv[0]);
 	}
 
 	if (close(child_fds[1]) == -1)
