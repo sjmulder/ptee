@@ -1,0 +1,30 @@
+.Dd May 14, 2019
+.Dt XTEE 1
+.Os
+.Sh NAME
+.Nm ptee
+.Nd executive pipe fitting
+.Sh SYNOPSIS
+.Nm
+.Ar program
+.Op Ar argument ...
+.Sh DESCRIPTION
+Copies standard input to standard output and a second program,
+unlike
+.Xr tee 1
+which copies to files.
+.Sh EXIT STATUS
+Returns 1 if an error occurs,
+or the exit status of the child process otherwise.
+.Sh EXAMPLES
+Display a fortune cookie and its word count:
+.Dl fortune | ptee wc
+.Pp
+Display and email build output,
+taking care to include standard error:
+.Dl make 2>&1 | ptee mail john@example.com
+.Sh SEE ALSO
+.Xr tee 1
+.Sh AUTHORS
+.An Sijmen J. Mulder
+.Aq Mt ik@sjmulder.nl
