@@ -19,6 +19,11 @@ main(int argc, char **argv)
 	ssize_t nread;
 	int status;
 
+#ifdef __OpenBSD__
+	if (pledge("stdio proc exec", NULL) == -1)
+		err(1, "pledge");
+#endif
+
 	if (getopt(argc, argv, "") != -1)
 		usage();
 
