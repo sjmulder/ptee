@@ -20,9 +20,9 @@ Running
 -------
 Should work on most Unix systems, including Linux, BSD, and macOS.
 
-   make
-   make install   [DESTDIR=] [PREFIX=/usr/local] [MANPREFIX=PREFIX/man]
-   make uninstall [DESTDIR=] [PREFIX=/usr/local] [MANPREFIX=PREFIX/man]
+    make
+    make install   [DESTDIR=] [PREFIX=/usr/local] [MANPREFIX=PREFIX/man]
+    make uninstall [DESTDIR=] [PREFIX=/usr/local] [MANPREFIX=PREFIX/man]
 
 Author
 ------
